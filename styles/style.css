@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&family=Work+Sans&display=swap");
+
+:root {
+  --primary: #3a3a3a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+/* header section start */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 95px 100px;
+  align-items: center;
+}
+.header .title {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.header ul {
+  display: flex;
+  gap: 30px;
+}
+
+.header ul li {
+  list-style: none;
+}
+.header ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--primary);
+}
+
+/* Banner section start */
+.banner {
+  display: flex;
+  margin: 0 100px;
+  gap: 40px;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+.left-banner {
+  flex-basis: 50%;
+}
+
+.right-banner {
+  flex-basis: 50%;
+  position: relative;
+}
+
+.right-banner .image1 {
+  /* position: absolute; */
+  width: 375px;
+  height: 375px;
+  z-index: -100;
+}
+.right-banner .camera-img {
+  /* position: absolute; */
+  width: 340px;
+  height: 314px;
+}
+/********************
+    Media query start
+********************/
+
+/* media query for header */
+
+@media screen and (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    margin: 35px 90px;
+    align-items: center;
+  }
+  .header .title {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .header ul {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 822px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .title {
+    margin-bottom: 20px;
+  }
+}
