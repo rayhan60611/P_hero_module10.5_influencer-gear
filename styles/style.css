@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: "Poppins", sans-serif;
   user-select: none;
   overflow-x: hidden;
@@ -73,6 +73,11 @@
   background-color: var(--secondary);
   border-radius: 41px;
   color: var(--white);
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .right-banner {
@@ -80,25 +85,20 @@
   position: relative;
 }
 
-.right-banner .div1 {
+.right-banner .image1 {
+  width: 475px;
+  height: 475px;
+  /* object-fit: cover; */
+}
+.right-banner .camera-img {
+  width: 440px;
+  height: 410px;
   position: absolute;
-  width: 375px;
-  height: 375px;
-  z-index: -100;
-}
-.right-banner .div2 {
-  /* position: absolute; */
-  width: 340px;
-  height: 314px;
-}
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 
-.right-banner .div1 .image1 {
-  width: 100%;
-  object-fit: cover;
-}
-.right-banner .div2 .camera-img {
-  width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 /********************
     Media query start
@@ -145,9 +145,57 @@
 
   .left-banner {
     flex-basis: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   .right-banner {
     flex-basis: 100%;
+  }
+  .left-banner h1 {
+    font-weight: 700;
+    font-size: 28px;
+  }
+  .left-banner p {
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .left-banner button {
+    width: 196px;
+    height: 44px;
+    background-color: var(--secondary);
+    border-radius: 41px;
+    color: var(--white);
+  }
+  .right-banner .image1 {
+    width: 325px;
+    height: 325px;
+    /* object-fit: cover; */
+  }
+  .right-banner .camera-img {
+    width: 300px;
+    height: 260px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1188px) {
+  .banner {
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin: 0 25px;
+  }
+  .left-banner {
+    flex-basis: 100%;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
