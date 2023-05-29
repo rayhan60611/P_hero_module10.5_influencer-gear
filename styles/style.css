@@ -2,6 +2,8 @@
 
 :root {
   --primary: #3a3a3a;
+  --secondary: #e02c6d;
+  --white: #ffffff;
 }
 * {
   margin: 0;
@@ -9,7 +11,7 @@
   border: 1px solid red;
   font-family: "Poppins", sans-serif;
   user-select: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 /* header section start */
 .header {
@@ -44,11 +46,33 @@
   display: flex;
   margin: 0 100px;
   gap: 40px;
-  /* justify-content: space-evenly; */
+  justify-content: space-between;
   align-items: center;
 }
 .left-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   flex-basis: 50%;
+}
+
+.left-banner h1 {
+  font-weight: 700;
+  font-size: 52px;
+  color: var(--primary);
+}
+.left-banner p {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.left-banner button {
+  width: 196px;
+  height: 44px;
+  background-color: var(--secondary);
+  border-radius: 41px;
+  color: var(--white);
 }
 
 .right-banner {
@@ -56,16 +80,25 @@
   position: relative;
 }
 
-.right-banner .image1 {
-  /* position: absolute; */
+.right-banner .div1 {
+  position: absolute;
   width: 375px;
   height: 375px;
   z-index: -100;
 }
-.right-banner .camera-img {
+.right-banner .div2 {
   /* position: absolute; */
   width: 340px;
   height: 314px;
+}
+
+.right-banner .div1 .image1 {
+  width: 100%;
+  object-fit: cover;
+}
+.right-banner .div2 .camera-img {
+  width: 100%;
+  object-fit: cover;
 }
 /********************
     Media query start
@@ -87,7 +120,7 @@
   .header ul {
     margin-top: 20px;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
   }
 }
@@ -98,5 +131,23 @@
   }
   .header .title {
     margin-bottom: 20px;
+  }
+}
+
+/* meada query for banner */
+
+@media screen and (max-width: 576px) {
+  .banner {
+    flex-direction: column-reverse;
+    gap: 25px;
+    margin: 0 25px;
+  }
+
+  .left-banner {
+    flex-basis: 100%;
+  }
+
+  .right-banner {
+    flex-basis: 100%;
   }
 }
