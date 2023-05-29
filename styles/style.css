@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   font-family: "Poppins", sans-serif;
   user-select: none;
   overflow-x: hidden;
@@ -83,20 +83,24 @@
 .right-banner {
   flex-basis: 50%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .right-banner .image1 {
   width: 475px;
   height: 475px;
+
   /* object-fit: cover; */
 }
 .right-banner .camera-img {
   width: 440px;
   height: 410px;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 
   /* object-fit: cover; */
 }
