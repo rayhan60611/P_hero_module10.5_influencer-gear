@@ -8,7 +8,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: "Poppins", sans-serif;
   user-select: none;
   overflow-x: hidden;
@@ -101,9 +101,40 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  /* object-fit: cover; */
 }
+
+/* sponsor logo section */
+.sponsor-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0;
+}
+.sponsor-logo-container .sponser-inner {
+  display: flex;
+  gap: 40px;
+  /* margin: 120px 165px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo-container img {
+  width: 80px;
+  height: 25px;
+}
+
+.sponsor-logo-container hr {
+  width: 100%;
+  border: 1px solid #aaaaaa;
+  margin: 36px 61px;
+}
+
+.hr-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /********************
     Media query start
 ********************/
@@ -201,5 +232,25 @@
     text-align: center;
     margin-left: 50px;
     margin-right: 50px;
+  }
+}
+
+/* sponsor logo media query */
+
+@media screen and (max-width: 576px) {
+  .sponsor-logo-container {
+    margin: 0 0;
+  }
+  .sponsor-logo-container .sponser-inner {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .sponsor-logo-container hr {
+    border-style: none;
+  }
+
+  .sponsor-logo-container img {
+    width: 60px;
+    height: 25px;
   }
 }
