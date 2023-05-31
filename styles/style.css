@@ -124,16 +124,16 @@
 }
 
 .sponsor-logo-container hr {
-  width: 100%;
+  width: 1000px;
   border: 1px solid #aaaaaa;
-  margin: 36px 61px;
+  margin: 36px 0;
 }
 
-.hr-div {
+/* .hr-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 /********************
     Media query start
@@ -252,5 +252,14 @@
   .sponsor-logo-container img {
     width: 60px;
     height: 25px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1000px) {
+  .sponsor-logo-container {
+    margin: 10px 0;
+  }
+  .sponsor-logo-container hr {
+    width: 100%;
   }
 }
