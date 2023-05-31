@@ -16,9 +16,6 @@
   overflow-x: hidden;
 }
 
-.hide {
-  /* display: none !important; */
-}
 /* header section start */
 .header {
   display: flex;
@@ -133,6 +130,7 @@
   width: 1000px;
   border: 1px solid #aaaaaa;
   margin: 36px 0;
+  opacity: 0.2;
 }
 
 /* collection section start */
@@ -161,7 +159,7 @@
 }
 .collection-card-container .card {
   width: 250px;
-  /* height: 430px; */
+  height: 365px;
   /* border: 1px solid red; */
   box-shadow: 0 0 0 2px #ffffff, 0.3em 0.3em 1em rgba(107, 106, 105, 0.3);
   border-radius: 5px;
@@ -181,6 +179,7 @@
   font-weight: 600;
   font-size: 20px;
   font-family: "Inter";
+  overflow: hidden;
 }
 
 .collection-container .card-price {
@@ -189,6 +188,7 @@
   font-family: "Inter";
   font-weight: 400;
   font-size: 20px;
+  overflow: hidden;
 }
 
 .collection-container .rating {
@@ -199,6 +199,7 @@
   font-size: 10px;
   font-weight: 700;
   font-family: "Inter";
+  overflow: hidden;
 }
 .collection-container .star {
   display: flex;
@@ -217,6 +218,133 @@
   font-weight: 700;
   font-size: 10px;
   width: 50%;
+  overflow: hidden;
+}
+.see-more-div {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  margin-bottom: 90px;
+}
+
+.collection-h4 {
+  color: var(--secondary);
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* feature-product */
+.feature-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.feature-inner-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  width: 1000px;
+  align-items: center;
+}
+
+.feature-product-container {
+  width: 100%;
+}
+.left-feature {
+  display: flex;
+}
+
+.left-feature img {
+  border-radius: 7px;
+  width: 100%;
+  /* height: 100%; */
+  margin: 15px 0;
+}
+.right-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+  justify-content: center;
+}
+.right-feature h2 {
+  font-weight: 700;
+  font-size: 38px;
+  color: #0a0826;
+}
+.right-feature p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #6c6c6c;
+}
+.right-feature button {
+  width: 155px;
+  height: 44px;
+  background: #e02c6d;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+}
+
+/* footer secion */
+
+.footer {
+  background-color: #0a0826;
+  width: 100%;
+  height: 239px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container {
+  display: flex;
+  width: 262px;
+  /* height: 139px; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+}
+.footer-container p {
+  color: #d9dbe1;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.footer-icon-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.footer-icon-container .div-1 {
+  display: flex;
+  gap: 16px;
+  width: 32px;
+  height: 32px;
+  background-color: #22213c;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icon-container .div-1 .footer-itag {
+  color: #ffffff;
 }
 
 /********************
@@ -358,6 +486,9 @@
   .collection-card-container .card {
     width: 90%;
   }
+  .see-more-div {
+    width: 85%;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 920px) {
@@ -367,5 +498,46 @@
 
   .collection-card-container .card {
     width: 90%;
+  }
+}
+
+/* feature product media query */
+
+@media screen and (max-width: 576px) {
+  .feature-inner-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .right-feature {
+    align-items: center;
+    text-align: center;
+  }
+  .right-feature h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1030px) {
+  .feature-inner-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .right-feature {
+    align-items: center;
+    text-align: center;
+  }
+  .right-feature h2 {
+    font-size: 24px;
   }
 }
